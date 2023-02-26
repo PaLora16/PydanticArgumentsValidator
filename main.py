@@ -10,5 +10,5 @@ if __name__ == "__main__":
     # valid
     pydantic_validation(3.11, "GPB", "EUR")
     # valid due to pydantic implicit type converison
-    pydantic_validation("3", "GPB", "EUR")
+    pydantic_validation(3.11, "GPB", "EUR")
 
