@@ -2,7 +2,7 @@ def classic_check(amount, from_currency, to_currency, allowed_symbols) -> None:
     """Old fashioned type control"""
     if not isinstance(amount, float):
         raise TypeError("Classic check : amount must be float")
-    
+
     if amount <= 0:
         raise ValueError("Classic check : Amount must be >=0")
 
@@ -11,7 +11,8 @@ def classic_check(amount, from_currency, to_currency, allowed_symbols) -> None:
 
     if from_currency not in allowed_symbols:
         raise ValueError(
-            f"Classic check : {from_currency} is not member of {allowed_symbols}"
+            f"Classic check : {from_currency} is not member of {
+                allowed_symbols}"
         )
     if to_currency not in allowed_symbols:
         raise ValueError(
@@ -19,8 +20,6 @@ def classic_check(amount, from_currency, to_currency, allowed_symbols) -> None:
         )
 
     print("Classic check OK")
-
-
 
 
 def validate(amount: float, from_currency: str, to_currency: str):
@@ -33,5 +32,3 @@ def validate(amount: float, from_currency: str, to_currency: str):
         )
     except Exception as e:
         print(e)
-
-
